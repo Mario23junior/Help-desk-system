@@ -1,1 +1,34 @@
-<h1>nav works!</h1>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <img src="../../../assets/logo-info.svg" alt="logo de vanegacao">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">home</i>
+                Home
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">psychology</i>
+                Tècnico
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">emoji_people</i>
+                Clientes
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">terminal</i>
+                Github
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">logout</i>
+                Logout
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <button class="menu mat-elevation-z9" (click)="drawer.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+</mat-drawer-container>
