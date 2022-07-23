@@ -1,19 +1,29 @@
 <div class="container">
     <form class="example-form  mat-elevation-z6">
-
         <h1> Help Desk Plus, sistema de controle</h1>
         <img src="../../../assets/login-icon.svg" alt="img-logo">
 
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>E-mail</mat-label>
-            <input type="email" matInput placeholder="Ex. useruva@gmail.com">
+            <input 
+            [formControl]="email"
+            required
+            [(ngModel)]="creds.email"
+             name="email" type="email" 
+             matInput placeholder="Ex. useruva@gmail.com">
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Ex. 938i23user">
+            <input
+            [formControl]="senha"
+            required 
+            [(ngModel)]="creds.senha"
+             name="senha"
+            type="password"
+            matInput placeholder="Ex. 938i23user">
         </mat-form-field>
+        <button [disabled]="!validFilds()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>
 
-        <button class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>
     </form>
 </div>
