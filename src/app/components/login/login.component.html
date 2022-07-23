@@ -23,7 +23,7 @@
             type="password"
             matInput placeholder="Ex. 938i23user">
         </mat-form-field>
-        <button [disabled]="!validFilds()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>
+        <button (click)="logar()" [disabled]="!validFilds()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>
 
     </form>
 </div>
